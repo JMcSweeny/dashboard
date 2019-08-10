@@ -12,6 +12,13 @@ export class Background implements Component {
   private photos: Photo[] = [];
   private currentIndex = 0;
 
+  private preloadPhotos(photos: Photo[]) {
+    photos.forEach(photo => {
+      const image = new Image();
+      image.src = photo.url
+    });
+  }
+
   @Interval(HOUR)
   private async getPhotos() {
     return await get<Photo[]>('photos');
@@ -21,6 +28,7 @@ export class Background implements Component {
   async render() {
     if (this.photos.length === 0) {
       this.photos = await this.getPhotos();
+      this.preloadPhotos(this.photos);
     };
 
     const photo = this.photos[this.currentIndex];
