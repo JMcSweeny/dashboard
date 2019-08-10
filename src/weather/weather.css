@@ -1,0 +1,36 @@
+#weather {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#weather > h1 {
+  font-weight: normal;
+  margin: 0;
+}
+
+#weather > .currently > .temperature {
+  font-size: 6em;
+}
+
+#weather > .currently > i {
+  font-size: 5em;
+}
+
+#weather > .daily {
+  display: flex;
+}
+
+#weather > .daily > .daily-forecast {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#weather > .daily > .daily-forecast > i {
+  font-size: 2rem;
+  margin: 15px 0 10px 0;
+}

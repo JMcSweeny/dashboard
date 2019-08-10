@@ -1,0 +1,40 @@
+#history {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  text-align: center;
+}
+
+#history > h3 {
+  font-weight: normal;
+}
+
+#history > .wrapper {
+  height: 175px;
+  background-color: rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#history > .wrapper > .fact {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#history > .wrapper > .fact.animate {
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0)
+  }
+
+  to {
+    transform: translateY(-100%)
+  }
+}

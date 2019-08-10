@@ -1,0 +1,14 @@
+#clock {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#clock > .day {
+  font-size: 2rem;
+}
+
+#clock > .time {
+  height: 115px;
+  font-size: 6rem;
+}

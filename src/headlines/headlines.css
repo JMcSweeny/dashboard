@@ -1,0 +1,30 @@
+#headlines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 700px;
+}
+
+.headline {
+  text-align: right;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+.headline h4 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.headline p {
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+.headline img {
+  margin-left: 10px;
+}
