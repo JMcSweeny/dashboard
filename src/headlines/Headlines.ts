@@ -16,7 +16,7 @@ export class Headlines implements Component {
     return `
       <div class="headline">
         <div>
-          <h4 class="title">${headline.title}</h4>
+          <h5 class="title">${headline.title}</h5>
           <p class="abstract">${headline.abstract}</p>
         </div>
         <img src="${headline.thumbnail}" />

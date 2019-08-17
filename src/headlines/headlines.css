@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 700px;
+  width: 600px;
 }
 
 .headline {
@@ -14,14 +14,14 @@
   padding: 10px;
 }
 
-.headline h4 {
+.headline h5 {
   margin: 0;
   font-weight: normal;
 }
 
 .headline p {
   margin: 5px;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .headline img {
