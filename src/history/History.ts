@@ -20,7 +20,6 @@ export class History implements Component {
     const historyElement = document.getElementById('history');
 
     historyElement.innerHTML = `
-      <h3>Today in History</h3>
       <div class="wrapper"></div>
     `;
 

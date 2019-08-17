@@ -24,18 +24,12 @@ interface Forecast {
 const weekdays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
 export class Weather implements Component {
-  private dayOfWeek: number;
-
-  constructor() {
-    this.dayOfWeek = new Date().getDay();
-  }
-  
   private formatTemperature(temperature: number) {
     return `${Math.round(temperature)}°`;
   }
 
   private renderDailyForecast(forecast: Daily, index: number) {
-    const dayOfWeek = weekdays[(this.dayOfWeek + index)  % 7];
+    const dayOfWeek = weekdays[(new Date().getDay() + index)  % 7];
     return `
       <div class="daily-forecast">
         <div class="day-of-week">${dayOfWeek}</div>

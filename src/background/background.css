@@ -6,17 +6,16 @@
   left: 0;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   transition: background-image 4s;
+  backface-visibility: hidden;
 }
 
 #background::after {
   content: '';
+  position: absolute;
   height: 100%;
   width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: 0.2;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.35) 100%);
 }

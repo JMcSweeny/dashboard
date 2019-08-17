@@ -16,7 +16,8 @@ div {
   font-family: 'Open Sans', sans-serif;
   padding: 1em;
   color: #FFF;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: black;
 }
 
 #dashboard > div {

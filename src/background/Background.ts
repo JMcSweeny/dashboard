@@ -1,5 +1,5 @@
 import { get } from '../api';
-import { HOUR, MINUTE, SECOND } from '../time';
+import { HOUR, MINUTE } from '../time';
 import { Component } from '../Component';
 import { Interval } from '../Interval';
 import './background.css';
