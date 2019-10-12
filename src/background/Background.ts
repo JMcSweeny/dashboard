@@ -1,42 +1,42 @@
-import { get } from '../api';
-import { HOUR, MINUTE } from '../time';
+import { MINUTE } from '../time';
 import { Component } from '../Component';
 import { Interval } from '../Interval';
 import './background.css';
 
 interface Photo {
-  url: string;
+  caption: string;
+  image: string;
 }
 
 export class Background implements Component {
-  private photos: Photo[] = [];
+  private photos: Photo[] = require('./photos.json');
   private currentIndex = 0;
+
+  private getImagePath(image: string): string {
+    return require(`./photos/${image}`);
+  }
 
   private preloadPhotos(photos: Photo[]) {
     photos.forEach(photo => {
       const image = new Image();
-      image.src = photo.url
+      image.src = this.getImagePath(photo.image);
     });
-  }
-
-  @Interval(HOUR)
-  private async getPhotos() {
-    return await get<Photo[]>('photos');
   }
 
   @Interval(MINUTE)
   async render() {
-    if (this.photos.length === 0) {
-      this.photos = await this.getPhotos();
-      this.preloadPhotos(this.photos);
-    };
+    this.preloadPhotos(this.photos);
 
     const photo = this.photos[this.currentIndex];
 
     this.currentIndex = (this.currentIndex  + 1) % this.photos.length;
 
-    const backgroundElement = document.getElementById('background');
+    const backgroundElement = document.getElementById('dashboard');
 
-    backgroundElement.style.backgroundImage = `url(${photo.url}`;
+    backgroundElement.style.backgroundImage = `url(${this.getImagePath(photo.image)}`;
+
+    const caption = document.getElementById('caption');
+
+    caption.innerHTML = photo.caption;
   }
 }

@@ -1,7 +1,6 @@
 #weather {
-  position: absolute;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 15px;
 }
 
 #weather > h1 {

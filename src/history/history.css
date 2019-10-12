@@ -1,35 +1,21 @@
 #history {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 500px;
+  top: 15px;
+  right: 15px;
+  width: 400px;
   text-align: center;
 }
 
-#history > .wrapper {
-  height: 175px;
-  overflow: hidden;
-}
-
-#history > .wrapper > .fact {
-  height: 100%;
+#history > .fact {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10px;
 }
 
-#history > .wrapper > .fact.animate {
-  animation: slideUp 1s ease-in-out;
+.fade-in {
+  animation: fadeIn 0.25s ease-in;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(0)
-  }
-
-  to {
-    transform: translateY(-100%)
-  }
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }

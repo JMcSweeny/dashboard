@@ -1,7 +1,6 @@
 #clock {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 15px;
+  bottom: 15px;
 }
 
 #clock > .day {
@@ -11,4 +10,5 @@
 #clock > .time {
   height: 115px;
   font-size: 6rem;
+  text-align: center;
 }

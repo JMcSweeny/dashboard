@@ -24,8 +24,8 @@ export class Clock implements Component {
     const clockElement = document.getElementById('clock');
   
     clockElement.innerHTML = `
-      <div class="time">${time.split(' ')[0]}</div>
       <div class="day">${weekday}, ${monthday}</div>
+      <div class="time">${time.split(' ')[0]}</div>
     `;
   }
 }
