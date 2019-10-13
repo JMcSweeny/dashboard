@@ -3,11 +3,6 @@
   left: 15px;
 }
 
-#weather > h1 {
-  font-weight: normal;
-  margin: 0;
-}
-
 #weather > .currently > .temperature {
   font-size: 6em;
 }

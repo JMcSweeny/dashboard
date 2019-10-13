@@ -48,7 +48,6 @@ export class Weather implements Component {
     const weather = await get<Forecast>('weather');
     const weatherElement = document.getElementById('weather');
     weatherElement.innerHTML = `
-      <h1>Warminster, PA</h1>
       <div class="currently">
         <span class="temperature">${this.formatTemperature(weather.currently.temperature)}</span>
         <i class="wi wi-forecast-io-${weather.currently.icon}"></i>
