@@ -1,6 +1,10 @@
 [
   {
     "caption": "Jordan Pond, Acadia National Park, Maine",
+    "image": "JordanPond.jpg"
+  },
+  {
+    "caption": "Acadia National Park, Maine",
     "image": "Acadia.jpg"
   },
   {
@@ -12,8 +16,20 @@
     "image": "Amsterdam-2.jpg"
   },
   {
+    "caption": "Andy Warhol Bridge, Pittsburgh, Pennsylvania",
+    "image": "AndyWarholBridge.jpg"
+  },
+  {
+    "caption": "Baltimore Harbor, Baltimore, Maryland",
+    "image": "BaltimoreHarbor.jpg"
+  },
+  {
     "caption": "Berlin, Germany",
     "image": "Berlin.jpg"
+  },
+  {
+    "caption": "Berliner Dom, Berlin, Germany",
+    "image": "BerlinerDom.jpg"
   },
   {
     "caption": "Boston, Massachusetts",
@@ -24,12 +40,28 @@
     "image": "Budapest.jpg"
   },
   {
+    "caption": "Budapest, Hungary",
+    "image": "Budapest-2.jpg"
+  },
+  {
     "caption": "Charleston, South Carolina",
     "image": "Charleston.jpg"
   },
   {
+    "caption": "Cologne, Germany",
+    "image": "Cologne.jpg"
+  },
+  {
     "caption": "Copenhagen, Denmark",
     "image": "Copenhagen.jpg"
+  },
+  {
+    "caption": "Eagle Lake, Acadia National Park, Maine",
+    "image": "EagleLake.jpg"
+  },
+  {
+    "caption": "Grand Canyon National Park, Arizona",
+    "image": "GrandCanyon.jpg"
   },
   {
     "caption": "Haleakalā National Park, Maui, Hawaii",
@@ -44,6 +76,10 @@
     "image": "Heidelberg-2.jpg"
   },
   {
+    "caption": "Ho'okipa Beach, Maui, Hawaii",
+    "image": "HookipaBeach.jpg"
+  },
+  {
     "caption": "Horseshoe Bend, Page, Arizona",
     "image": "Horseshoe.jpg"
   },
@@ -52,8 +88,20 @@
     "image": "Horsham.jpg"
   },
   {
+    "caption": "Ku'au Cove, Maui, Hawaii",
+    "image": "KuauCove.jpg"
+  },
+  {
+    "caption": "Magnolia Plantation, Charleston, South Carolina",
+    "image": "Magnolia.jpg"
+  },
+  {
     "caption": "Maui, Hawaii",
     "image": "Maui.jpg"
+  },
+  {
+    "caption": "Mokapu Beach, Maui, Hawaii",
+    "image": "MokapuBeach.jpg"
   },
   {
     "caption": "Montreal, Quebec",
@@ -64,8 +112,20 @@
     "image": "Munich.jpg"
   },
   {
+    "caption": "Marienplatz, Munich, Germany",
+    "image": "Munich-2.jpg"
+  },
+  {
     "caption": "New York, New York",
     "image": "New-York.jpg"
+  },
+  {
+    "caption": "Nyhavn, Copenhagen, Denmark",
+    "image": "Nyhavn.jpg"
+  },
+  {
+    "caption": "Olympiastadion, Berlin, Germany",
+    "image": "Olympiastadion.jpg"
   },
   {
     "caption": "Philadelphia, Pennsylvania",
@@ -106,6 +166,10 @@
   {
     "caption": "Wailea, Maui, Hawaii",
     "image": "Wailea.jpg"
+  },
+  {
+    "caption": "Wailea, Maui, Hawaii",
+    "image": "Wailea-2.jpg"
   },
   {
     "caption": "Washington, D.C.",
