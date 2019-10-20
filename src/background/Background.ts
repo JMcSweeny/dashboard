@@ -16,17 +16,8 @@ export class Background implements Component {
     return require(`./photos/${image}`);
   }
 
-  private preloadPhotos(photos: Photo[]) {
-    photos.forEach(photo => {
-      const image = new Image();
-      image.src = this.getImagePath(photo.image);
-    });
-  }
-
   @Interval(MINUTE)
   async render() {
-    this.preloadPhotos(this.photos);
-
     const photo = this.photos[this.currentIndex];
 
     this.currentIndex = (this.currentIndex  + 1) % this.photos.length;
