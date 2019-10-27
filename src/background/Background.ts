@@ -16,7 +16,7 @@ export class Background implements Component {
     return require(`./photos/${image}`);
   }
 
-  @Interval(MINUTE)
+  @Interval(MINUTE * 30)
   async render() {
     const photo = this.photos[this.currentIndex];
 

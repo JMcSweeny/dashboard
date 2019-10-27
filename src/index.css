@@ -19,9 +19,6 @@ div {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  transition: background-image 2s;
-  backface-visibility: hidden;
-  padding: 20px;
 }
 
 .panel {
