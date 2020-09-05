@@ -1,19 +1,12 @@
-import { Background } from './background/Background';
-import { Clock } from './clock/Clock';
-import { Component } from './Component';
-import { Weather } from './weather/Weather';
-import './index.css';
-import { History } from './history/History';
+import "./index.css";
+import { photos$, renderPhotos } from "./photos/photos";
+import { dateTime$, renderDateTime } from "./datetime/datetime";
+import { renderCurrentWeather, currentWeather$ } from "./current-weather/current-weather";
+import { weatherForecast$, renderWeatherForecast } from "./weather-forecast/weather-forecast";
 
-const components: Component[] = [
-  new Background(),
-  new Clock(),
-  new Weather(),
-  new History()
-];
+photos$.subscribe(renderPhotos);
+dateTime$.subscribe(renderDateTime);
+currentWeather$.subscribe(renderCurrentWeather);
+weatherForecast$.subscribe(renderWeatherForecast);
 
-function bootstrap() {
-  components.forEach(component => component.render());
-}
 
-bootstrap();
