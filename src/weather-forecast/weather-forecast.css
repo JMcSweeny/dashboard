@@ -1,9 +1,9 @@
 #weather-forecast {
-  grid-column: 1/7;
+  grid-column: 1/8;
   grid-row: 2;
-  background-color: #77C4D3;
   display: flex;
   align-items: center;
+  background-color: #011C26;
 }
 
 #weather-forecast .forecast {
@@ -16,18 +16,20 @@
 }
 
 #weather-forecast .forecast .name {
+  margin-bottom: 1em;
   font-size: 1.5em;
 }
 
 #weather-forecast .forecast .temperature {
-  font-size: 4em;
+  font-size: 5em;
 }
 
 #weather-forecast .forecast img {
-  width: 40%;
-  border-radius: 10%;
+  width: 50%;
+  border-radius: 5%;
 }
 
 #weather-forecast .forecast p {
   height: 20px;
+  font-size: 0.85em;
 }

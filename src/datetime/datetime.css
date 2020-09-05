@@ -1,7 +1,7 @@
 #datetime {
   grid-column: 1/3;
   grid-row: 1;
-  background-color: #EA2E49;
+  background-color: #D9042B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,13 +9,13 @@
 }
 
 #datetime .date {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 #datetime .time {
-  font-size: 10em;
+  font-size: 7em;
 }
 
 #datetime .ampm {
-  font-size: 4em;
+  font-size: 2em;
 }

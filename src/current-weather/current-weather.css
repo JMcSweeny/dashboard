@@ -1,24 +1,18 @@
 #current-weather {
   grid-column: 3/5;
   grid-row: 1;
-  background-color: #333745;
+  background-color: #588C8C;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#current-weather img {
-  height: 50%;
-  border-radius: 50%;
-  margin-left: 25px;
-}
-
 #current-weather .temperature {
-  font-size: 12em;
+  font-size: 10em;
   text-align: center;
 }
 
 #current-weather .description {
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
 }

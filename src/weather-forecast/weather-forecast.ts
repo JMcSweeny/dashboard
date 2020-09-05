@@ -11,7 +11,6 @@ interface WeatherForecastResponse {
       isDaytime: boolean;
       temperature: number;
       icon: string;
-      shortForecast: string;
     }[]
   }
 }
@@ -20,7 +19,6 @@ interface WeatherForecast {
   name: string;
   temperature: number;
   icon: string;
-  summary: string;
 }
 
 const parseResponse = (response: WeatherForecastResponse): WeatherForecast[] => {
@@ -29,8 +27,7 @@ const parseResponse = (response: WeatherForecastResponse): WeatherForecast[] => 
     .map(period => ({
       name: period.name,
       temperature: period.temperature,
-      icon: period.icon,
-      summary: period.shortForecast
+      icon: period.icon
     }));
 };
 
@@ -50,14 +47,13 @@ export const renderWeatherForecast = (weatherForecast: WeatherForecast[]): void 
   const weatherForecastElement = document.getElementById('weather-forecast');
   
   weatherForecastElement.innerHTML = weatherForecast.map(forecast => {
-    const { name, temperature, icon, summary } = forecast;
+    const { name, temperature, icon } = forecast;
 
     return `
       <div class="forecast">
         <div class="name">${name}</div>
-        <div class="temperature">${temperature}°</div>
         <img src="${icon}" />
-        <p>${summary}</p>
+        <div class="temperature">${temperature}</div>
       </div>
     `
   }).join('');

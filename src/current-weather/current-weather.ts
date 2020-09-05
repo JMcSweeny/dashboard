@@ -7,7 +7,6 @@ import './current-weather.css';
 interface CurrentWeatherResponse {
   properties: {
     textDescription: string;
-    icon: string;
     temperature: {
       value: number;
     }
@@ -17,16 +16,14 @@ interface CurrentWeatherResponse {
 interface CurrentWeather {
   temperature: number;
   description: string;
-  icon: string;
 }
 
 const parseResponse = (response: CurrentWeatherResponse): CurrentWeather => {
-  const { temperature, textDescription, icon } = response.properties;
+  const { temperature, textDescription } = response.properties;
 
   return {
     temperature: Math.round(temperature.value * (9/5)) + 32,
-    description: textDescription,
-    icon
+    description: textDescription
   };
 }
 
@@ -44,13 +41,12 @@ export const currentWeather$ =
 export const renderCurrentWeather = (currentWeather: CurrentWeather): void => {
   const currentWeatherElement = document.getElementById('current-weather');
 
-  const { temperature, description, icon } = currentWeather;
+  const { temperature, description } = currentWeather;
 
   currentWeatherElement.innerHTML = `
     <div>
       <div class="temperature">${temperature}°</div>
       <div class="description">${description}</div>
     </div>
-    <img src="${icon}" />
   `;
 };
