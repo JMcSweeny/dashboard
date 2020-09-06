@@ -24,6 +24,7 @@ interface WeatherForecast {
 const parseResponse = (response: WeatherForecastResponse): WeatherForecast[] => {
   return response.properties.periods
     .filter(period => period.isDaytime)
+    .slice(0, 5)
     .map(period => ({
       name: period.name,
       temperature: period.temperature,
