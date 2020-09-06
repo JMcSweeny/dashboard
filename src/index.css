@@ -17,5 +17,5 @@ body {
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-gap: 10px;
   background-color: #111111;
-  color: #FFFFFF;
+  color: #F2EBC7;
 }
