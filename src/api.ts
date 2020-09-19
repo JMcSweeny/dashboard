@@ -1,6 +1,6 @@
 import { Observable, throwError } from "rxjs";
 import { fromFetch } from "rxjs/fetch";
-import { switchMap } from "rxjs/operators";
+import { switchMap, catchError } from "rxjs/operators";
 
 export const get = <T>(url: string): Observable<T> => {
   return fromFetch(url).pipe(
@@ -10,6 +10,9 @@ export const get = <T>(url: string): Observable<T> => {
       }
 
       return response.json();
+    }),
+    catchError(err => {
+      return throwError(err);
     })
   );
 };

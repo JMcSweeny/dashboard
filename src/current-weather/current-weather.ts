@@ -1,6 +1,6 @@
 import { interval, empty } from "rxjs";
 import { MINUTE } from "../time-unit";
-import { startWith, map, switchMap, catchError } from "rxjs/operators";
+import { startWith, map, switchMap, catchError, shareReplay } from "rxjs/operators";
 import { get } from "../api";
 import './current-weather.css';
 
@@ -19,6 +19,7 @@ interface CurrentWeather {
 }
 
 const parseResponse = (response: CurrentWeatherResponse): CurrentWeather => {
+  console.log('In Here');
   const { temperature, textDescription } = response.properties;
 
   return {

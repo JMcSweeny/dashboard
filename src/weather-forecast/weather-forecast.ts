@@ -1,7 +1,7 @@
 import { get } from "../api";
-import { interval } from "rxjs";
+import { interval, empty } from "rxjs";
 import { HOUR } from "../time-unit";
-import { startWith, switchMap, map } from "rxjs/operators";
+import { startWith, switchMap, map, catchError } from "rxjs/operators";
 import './weather-forecast.css';
 
 interface WeatherForecastResponse {
@@ -41,6 +41,10 @@ export const weatherForecast$ =
       return get<WeatherForecastResponse>(WEATHER_FORECAST_URL).pipe(
         map(parseResponse)
       );
+    }),
+    catchError(err => {
+      console.error(err);
+      return empty();
     })
   );
 
