@@ -19,7 +19,6 @@ interface CurrentWeather {
 }
 
 const parseResponse = (response: CurrentWeatherResponse): CurrentWeather => {
-  console.log('In Here');
   const { temperature, textDescription } = response.properties;
 
   return {
