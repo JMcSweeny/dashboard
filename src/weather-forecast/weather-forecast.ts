@@ -1,7 +1,7 @@
 import { get } from "../api";
 import { interval, empty } from "rxjs";
 import { HOUR } from "../time-unit";
-import { startWith, switchMap, map, catchError } from "rxjs/operators";
+import { startWith, switchMap, map, catchError, mergeMap } from "rxjs/operators";
 import './weather-forecast.css';
 
 interface WeatherForecastResponse {
@@ -37,14 +37,11 @@ const WEATHER_FORECAST_URL = 'https://api.weather.gov/gridpoints/PHI/49,86/forec
 export const weatherForecast$ = 
   interval(HOUR).pipe(
     startWith(0),
-    switchMap(() => {
+    mergeMap(() => {
       return get<WeatherForecastResponse>(WEATHER_FORECAST_URL).pipe(
-        map(parseResponse)
+        map(parseResponse),
+        catchError(() => empty())
       );
-    }),
-    catchError(err => {
-      console.error(err);
-      return empty();
     })
   );
 

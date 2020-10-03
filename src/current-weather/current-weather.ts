@@ -1,6 +1,6 @@
 import { interval, empty } from "rxjs";
 import { MINUTE } from "../time-unit";
-import { startWith, map, switchMap, catchError, shareReplay } from "rxjs/operators";
+import { startWith, map, catchError, mergeMap } from "rxjs/operators";
 import { get } from "../api";
 import './current-weather.css';
 
@@ -32,14 +32,13 @@ const CURRENT_CONDITIONS_URL = 'https://api.weather.gov/stations/KDYL/observatio
 export const currentWeather$ = 
   interval(MINUTE * 30).pipe(
     startWith(0),
-    switchMap(() => {
+    mergeMap(() => {
       return get<CurrentWeatherResponse>(CURRENT_CONDITIONS_URL)
-        .pipe(map(parseResponse));
+        .pipe(
+          map(parseResponse),
+          catchError(() => empty())
+        );
     }),
-    catchError(err => {
-      console.error(err);
-      return empty();
-    })
   );
 
 export const renderCurrentWeather = (currentWeather: CurrentWeather): void => {
