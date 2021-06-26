@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
 
@@ -9,4 +10,9 @@ module.exports = merge(common, {
     open: true,
     hot: true,
   },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      API_ROOT: "https://localhost:5001",
+    }),
+  ],
 });

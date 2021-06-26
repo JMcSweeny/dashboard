@@ -1,3 +1,22 @@
+#current-weather {
+  grid-column: 3/5;
+  grid-row: 1;
+  background-color: #348899;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#current-weather .temperature {
+  font-size: 10em;
+  text-align: center;
+}
+
+#current-weather .description {
+  font-size: 2em;
+  text-align: center;
+}
+
 #weather-forecast {
   grid-column: 1/5;
   grid-row: 2;
@@ -17,19 +36,9 @@
 
 #weather-forecast .forecast .name {
   margin-bottom: 1em;
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 #weather-forecast .forecast .temperature {
-  font-size: 3.5em;
-}
-
-#weather-forecast .forecast img {
-  width: 75%;
-  border-radius: 5%;
-}
-
-#weather-forecast .forecast p {
-  height: 20px;
-  font-size: 0.85em;
+  font-size: 1.5em;
 }
